@@ -1,0 +1,5 @@
+include ':app'
+include ':capacitor-cordova-android-plugins'
+project(':capacitor-cordova-android-plugins').projectDir = new File('./capacitor-cordova-android-plugins/')
+
+apply from: new File(["node", "--print", "require.resolve('@capacitor/android/scripts/cordova-settings.gradle')"].execute(null, rootDir).text.trim())
