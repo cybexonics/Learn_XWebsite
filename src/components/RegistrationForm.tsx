@@ -149,8 +149,8 @@ const RegistrationForm = () => {
       };
 
       // 👉 Send to backend
-      // const response = await fetch("https://learnx-backend-ot3j.onrender.com/auth/teacher/register", {
-      const response = await fetch("http://localhost:5050/api/auth/signup", {
+      const response = await fetch("https://learnx-backend-ot3j.onrender.com/auth/signup", {
+      // const response = await fetch("http://localhost:5050/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
