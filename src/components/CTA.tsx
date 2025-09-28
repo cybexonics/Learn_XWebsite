@@ -10,6 +10,7 @@ const CTA = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Transform Your Teaching Career Today</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           Join Learn X and focus on what matters most—delivering quality education—while we handle the rest. Keep 90% of what you earn.
+          
         </p>
         <div className="bg-white/10 backdrop-blur p-6 rounded-lg mb-8 max-w-3xl mx-auto">
           <h3 className="text-2xl font-semibold mb-3">What You Get for Just ₹999/Year:</h3>
