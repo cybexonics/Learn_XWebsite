@@ -47,6 +47,9 @@ const RegistrationForm = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
+  // ✅ Log current backend URL to confirm correct environment variable usage
+  console.log("API base URL:", import.meta.env.VITE_API_BASE);
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -149,17 +152,15 @@ const RegistrationForm = () => {
         demoVideo: demoVideoUrl || null,
       };
 
-      // ✅ Use .env-based backend URL (fixed)
-      const response = await fetch(
-        `${import.meta.env.VITE_API_BASE}/api/auth/signup`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(completeData),
-        }
-      );
+      // ✅ Use .env-based backend URL
+      const apiBase = import.meta.env.VITE_API_BASE;
+      const response = await fetch(`${apiBase}/api/auth/signup`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(completeData),
+      });
 
       const result = await response.json();
 
@@ -357,7 +358,9 @@ const RegistrationForm = () => {
                   <Checkbox
                     id="recordedVideos"
                     checked={formData.preferredMode.includes("recorded")}
-                    onCheckedChange={() => handleTeachingModeChange("recorded")}
+                    onCheckedChange={() =>
+                      handleTeachingModeChange("recorded")
+                    }
                   />
                   <label htmlFor="recordedVideos" className="text-sm">
                     Recorded Videos
