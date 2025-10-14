@@ -95,11 +95,11 @@ const RegistrationForm = () => {
   ) => {
     const data = new FormData();
     data.append("file", file);
-    data.append("upload_preset", "ml_default"); // Replace with your preset
-    data.append("cloud_name", "djowkrpwk"); // Replace with your Cloud name
+    data.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
+    data.append("cloud_name", CLOUDINARY_CLOUD_NAME);
 
     const response = await fetch(
-      `https://api.cloudinary.com/v1_1/djowkrpwk/${resourceType}/upload`,
+      `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/${resourceType}/upload`,
       {
         method: "POST",
         body: data,
@@ -110,10 +110,11 @@ const RegistrationForm = () => {
     console.log(result);
     return result.secure_url;
   };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
+
     if (
       !formData.name ||
       !formData.email ||
@@ -148,15 +149,17 @@ const RegistrationForm = () => {
         demoVideo: demoVideoUrl || null,
       };
 
-      // 👉 Send to backend
-      // const response = await fetch("https://learnx-backend-ot3j.onrender.com/auth/teacher/", {
-      const response = await fetch("https://learnx-backend-h6h0.onrender.com/api/auth/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(completeData),
-      });
+      // ✅ Use .env-based backend URL (fixed)
+      const response = await fetch(
+        `${import.meta.env.VITE_API_BASE}/api/auth/signup`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(completeData),
+        }
+      );
 
       const result = await response.json();
 
@@ -223,9 +226,10 @@ const RegistrationForm = () => {
                 required
               />
             </div>
-<div className="space-y-2">
+
+            <div className="space-y-2">
               <Label htmlFor="password">
-                password <span className="text-red-500">*</span>
+                Password <span className="text-red-500">*</span>
               </Label>
               <Input
                 id="password"
