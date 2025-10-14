@@ -157,7 +157,7 @@ const RegistrationForm = () => {
         "https://learnx-backend-h6h0.onrender.com";
       console.log("Using API base:", apiBase);
 
-      const response = await fetch(`${apiBase}/api/auth/register`, {
+      const response = await fetch(`${apiBase}/api/auth/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(completeData),
