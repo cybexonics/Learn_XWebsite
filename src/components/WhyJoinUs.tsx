@@ -40,7 +40,7 @@ const WhyJoinUs = () => {
     {
       icon: <Users size={24} />,
       title: "We Bring Students to You",
-      description: "Join for just ₹999/year and we'll actively promote your profile to help you acquire more students without additional marketing costs.",
+      description: "Join for just ₹99/year and we'll actively promote your profile to help you acquire more students without additional marketing costs.",
     },
     {
       icon: <Award size={24} />,

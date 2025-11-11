@@ -23,15 +23,15 @@ const FAQ = () => {
     },
     {
       question: "How does Learn X help me get more students?",
-      answer: "When you register for ₹999/year, your profile becomes part of our marketplace where potential students can discover you. We actively promote teachers through our marketing efforts, social media, and search engine optimization—bringing students to you without additional marketing costs.",
+      answer: "When you register for ₹99/year, your profile becomes part of our marketplace where potential students can discover you. We actively promote teachers through our marketing efforts, social media, and search engine optimization—bringing students to you without additional marketing costs.",
     },
     {
       question: "How can I build my personal brand with Learn X?",
       answer: "Our platform allows you to create a comprehensive professional profile, showcase your expertise through course portfolios, collect and display student testimonials, and build a loyal following. As your student base grows, so does your reputation as an authority in your field.",
     },
     {
-      question: "Is the ₹999 registration fee refundable?",
-      answer: "The annual registration fee of ₹999 is non-refundable, but it provides you access to all platform features for a full year, including student acquisition support, secure class hosting, payment processing, and personal brand building tools.",
+      question: "Is the ₹99 registration fee refundable?",
+      answer: "The annual registration fee of ₹99 is non-refundable, but it provides you access to all platform features for a full year, including student acquisition support, secure class hosting, payment processing, and personal brand building tools.",
     },
   ];
 

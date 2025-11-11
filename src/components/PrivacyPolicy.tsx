@@ -65,7 +65,7 @@ const PrivacyPolicy = () => {
             <AccordionTrigger className="text-xl font-semibold">Refund & Cancellation Policy</AccordionTrigger>
             <AccordionContent className="text-gray-700 space-y-3">
               <p>
-                The annual registration fee of ₹999 is non-refundable once paid. Cancellations will not result in refunds.
+                The annual registration fee of ₹99 is non-refundable once paid. Cancellations will not result in refunds.
               </p>
               <p>
                 Please review platform benefits before registration.
@@ -77,7 +77,7 @@ const PrivacyPolicy = () => {
           <AccordionItem value="payment-terms">
             <AccordionTrigger className="text-xl font-semibold">Payment Terms</AccordionTrigger>
             <AccordionContent className="text-gray-700 space-y-3">
-              <p>Registration Fee: ₹999 per year (non-refundable).</p>
+              <p>Registration Fee: ₹99 per year (non-refundable).</p>
               <p>Commission: 10% per transaction; 90% goes to the teacher.</p>
               <p>Payments are made every 15 days via bank/UPI.</p>
               <p>All applicable Indian taxes must be handled by the teacher.</p>

@@ -21,7 +21,7 @@ const HowItWorks = () => {
   const steps = [
     {
       number: 1,
-      title: "Register Once & Pay ₹999",
+      title: "Register Once & Pay ₹99",
       description: "Complete a simple registration and make a one-time annual payment to unlock all platform features.",
     },
     {
