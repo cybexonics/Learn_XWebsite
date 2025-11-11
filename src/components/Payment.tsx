@@ -34,7 +34,7 @@ const Payment = () => {
     try {
       const options = {
   key: "rzp_geQDVGSnt95quu",
-  amount: 99900,
+  amount: 9900,
   currency: "INR",
   name: "LearnX",
   description: "Annual Membership Fee",
@@ -78,7 +78,7 @@ rzp.open();
       <CardHeader>
         <CardTitle>Complete Your Registration</CardTitle>
         <CardDescription>
-          One-time payment of ₹999 for annual membership
+          One-time payment of ₹99 for annual membership
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -88,7 +88,7 @@ rzp.open();
             <div className="bg-teachGrow-muted p-4 rounded-md">
               <div className="flex justify-between mb-2">
                 <span>Annual Membership Fee</span>
-                <span>₹999.00</span>
+                <span>₹99.00</span>
               </div>
               <div className="flex justify-between mb-2">
                 <span>GST (18%)</span>
@@ -96,7 +96,7 @@ rzp.open();
               </div>
               <div className="border-t pt-2 mt-2 font-medium flex justify-between">
                 <span>Total</span>
-                <span>₹999.00</span>
+                <span>₹99.00</span>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@ rzp.open();
           className="bg-teachGrow-primary hover:bg-teachGrow-primary/90 w-full"
           disabled={loading}
         >
-          {loading ? "Processing..." : "Pay ₹999 with Razorpay"}
+          {loading ? "Processing..." : "Pay ₹99 with Razorpay"}
         </Button>*/}
         <RazorpayEmbedButton/>
       </CardFooter>
